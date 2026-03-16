@@ -49,7 +49,7 @@ const CONFIG = {
     {
       type: "greeting",
       title: "Chào",
-      subtitle: "Mình có một điều nhỏ muốn dành cho bạn hôm nay...",
+      subtitle: "Nếu bạn đang xem trang này thì... mình có một điều nhỏ muốn gửi đến bạn hôm nay.",
     },
 
     {
@@ -60,36 +60,41 @@ const CONFIG = {
 
     {
       type: "announcement",
-      text: "Bởi vì hôm nay là ngày rất đặc biệt 🎉",
+      text: "Vì hôm nay là sinh nhật của bạn đó! 🎉",
     },
 
     {
       type: "chatbox",
       message:
-        "Chúc mừng sinh nhật Bảo Trâm. Mong rằng hôm nay sẽ là một ngày thật vui, thật nhiều tiếng cười và thật nhiều điều tốt đẹp đến với bạn.",
-      buttonText: "Gửi lời chúc",
+        "Chúc mừng sinh nhật Bảo Trâm! nha, Mong rằng hôm nay của bạn sẽ thật vui, thật nhiều tiếng cười và nhận được thật nhiều điều tốt đẹp.",
+      buttonText: "Xem tiếp một chút nha",
     },
 
     {
-      type: "ideas",
-      lines: [
-        "Ban đầu mình định chỉ gửi một tin nhắn chúc mừng thôi...",
-        "Một tin nhắn rất bình thường như bao người khác.",
-        "Nhưng rồi mình nghĩ lại...",
-        "Một người như bạn rất <strong>đặc biệt</strong>",
-        "thì nên nhận được một điều gì đó <strong>đặc biệt</strong> hơn một chút.",
-        "Nên mình đã làm trang nhỏ này.",
-        "Hy vọng khi bạn đọc đến đây...",
-        "bạn sẽ mỉm cười một chút <span>:)</span>",
-      ],
-      bigLetters: "BAO TRAM",
-    },
+  type: "ideas",
+    lines: [
+      "Ban đầu mình định nhắn một tin chúc sinh nhật thôi.",
+      "Kiểu rất bình thường á.",
+      "\"Chúc mừng sinh nhật nha 🎂\" rồi thêm vài emoji 🎉",
+      "Xong chắc cũng giống như bao tin nhắn khác.",
+      "Nhưng mà nghĩ lại...",
+      "Sinh nhật mỗi năm chỉ có một lần.",
+      "Nếu chỉ nhắn vài dòng rồi hết thì có vẻ hơi nhanh quá.",
+      "Nên mình nghĩ thử làm một cái gì đó khác một chút.",
+      "Và rồi mình ngồi làm cái web nhỏ này.",
+      "Không phải là coder xịn sò gì đâu",
+      "Chỉ là muốn tạo ra một thứ gì đó hơi <strong>đặc biệt</strong>",
+      "Để khi bạn xem tới đây...",
+      "có thể dừng lại vài giây và mỉm cười nhẹ một cái <span>:)</span>",
+    ],
+    bigLetters: "BAO TRAM",
+  },
 
     {
       type: "quote",
       text:
-        "Tuổi mới không chỉ là thêm một con số, mà là thêm nhiều kỷ niệm, nhiều nụ cười và nhiều câu chuyện đẹp trong cuộc sống.",
-      author: "Baso",
+        "Thêm một tuổi mới không chỉ là thêm một con số. Mà là thêm một năm với nhiều trải nghiệm, nhiều câu chuyện và nhiều kỷ niệm mới.",
+      author: "Baso - cụ thể là Báo 🐧",
     },
 
     {
@@ -106,7 +111,7 @@ const CONFIG = {
       type: "profile",
       wishTitle: "Chúc mừng sinh nhật",
       wishText:
-        "Mong rằng tuổi mới của bạn sẽ thật nhiều niềm vui, thật nhiều may mắn và thật nhiều điều tốt đẹp. Mong rằng dù có chuyện gì xảy ra thì bạn vẫn luôn giữ được nụ cười của mình. Vì nụ cười đó thật sự rất đẹp.",
+        "Mong rằng tuổi mới của bạn sẽ có thật nhiều niềm vui, thật nhiều may mắn và thật nhiều điều tích cực. Mong rằng dù cuộc sống có bận rộn hay đôi lúc hơi mệt mỏi thì bạn vẫn luôn giữ được nụ cười của mình. Vì nụ cười đó thật sự rất đẹp.",
     },
 
     {
@@ -122,7 +127,7 @@ const CONFIG = {
     {
       type: "closing",
       text:
-        "Cảm ơn bạn đã dành thời gian xem món quà nhỏ này. Hy vọng sinh nhật năm nay của bạn sẽ thật đáng nhớ.",
+        "Cảm ơn bạn đã xem tới đây. Hy vọng trang nhỏ này làm sinh nhật của bạn vui hơn một chút 🎉",
       replayText: "Nếu muốn xem lại, bạn có thể nhấn vào đây 🎉",
     },
   ],
