@@ -1,0 +1,322 @@
+<!DOCTYPE html>
+<html lang="vi">
+
+<head>
+<meta charset="UTF-8">
+<title>Birthday Magic QR</title>
+
+<script src="https://cdn.jsdelivr.net/npm/qr-code-styling@1.6.0/lib/qr-code-styling.js"></script>
+
+<style>
+
+body{
+margin:0;
+height:100vh;
+display:flex;
+justify-content:center;
+align-items:center;
+font-family:"JetBrains Mono", monospace;
+
+/* dark grid */
+
+background:#0b0f17;
+
+background-image:
+linear-gradient(rgba(255,255,255,.04) 1px, transparent 1px),
+linear-gradient(90deg, rgba(255,255,255,.04) 1px, transparent 1px);
+
+background-size:40px 40px;
+
+overflow:hidden;
+}
+
+/* window */
+
+.window{
+
+width:440px;
+background:#101826;
+border-radius:20px;
+border:1px solid rgba(255,255,255,.05);
+
+box-shadow:
+0 30px 80px rgba(0,0,0,.7);
+
+overflow:hidden;
+
+}
+
+/* bar */
+
+.bar{
+
+display:flex;
+align-items:center;
+padding:12px 18px;
+border-bottom:1px solid rgba(255,255,255,.05);
+
+}
+
+.dot{
+width:12px;
+height:12px;
+border-radius:50%;
+margin-right:8px;
+}
+
+.red{background:#ff5f56}
+.yellow{background:#ffbd2e}
+.green{background:#27c93f}
+
+.path{
+margin-left:auto;
+color:#7b8aa3;
+font-size:13px;
+}
+
+/* content */
+
+.content{
+padding:35px;
+text-align:center;
+}
+
+/* code line */
+
+.code{
+color:#ff8ad4;
+margin-bottom:15px;
+}
+
+/* title */
+
+.title{
+
+font-size:22px;
+margin-bottom:28px;
+
+background:linear-gradient(
+90deg,
+#ff4fd8,
+#ff7b54,
+#ffd166
+);
+
+-webkit-background-clip:text;
+color:transparent;
+
+text-shadow:
+0 0 10px rgba(255,120,200,.4);
+
+}
+
+/* qr */
+
+.qr{
+
+background:white;
+padding:16px;
+border-radius:16px;
+display:inline-block;
+
+box-shadow:
+0 0 35px rgba(255,100,200,.6);
+
+}
+
+/* link */
+
+.link{
+
+margin-top:20px;
+display:inline-block;
+
+padding:10px 18px;
+
+background:#1a2438;
+
+border-radius:10px;
+
+color:#ffd6ff;
+
+font-size:14px;
+
+}
+
+/* button */
+
+.btn{
+
+margin-top:28px;
+
+border:2px solid #ff7b54;
+
+color:#ff7b54;
+
+padding:14px;
+
+border-radius:12px;
+
+font-size:16px;
+
+}
+
+.spinner{
+
+display:inline-block;
+
+width:14px;
+height:14px;
+
+border:3px solid #ff7b54;
+border-top-color:transparent;
+
+border-radius:50%;
+
+animation:spin 1s linear infinite;
+
+margin-right:8px;
+
+}
+
+@keyframes spin{
+to{transform:rotate(360deg)}
+}
+
+/* confetti */
+
+.confetti{
+
+position:absolute;
+
+width:6px;
+height:6px;
+
+opacity:.8;
+
+animation:fall linear infinite;
+
+}
+
+@keyframes fall{
+
+0%{transform:translateY(-100px)}
+100%{transform:translateY(110vh)}
+
+}
+
+</style>
+</head>
+
+<body>
+
+<div class="window">
+
+<div class="bar">
+
+<div class="dot red"></div>
+<div class="dot yellow"></div>
+<div class="dot green"></div>
+
+<div class="path">~/birthday/magic-qr</div>
+
+</div>
+
+<div class="content">
+
+<div class="code">
+const event = "Birthday_2026";
+</div>
+
+<div class="title">
+&lt;HappyBirthdayExperience /&gt;
+</div>
+
+<div class="qr" id="qr"></div>
+
+<br>
+
+<div class="link">
+https://happybirthday.baso.id.vn/
+</div>
+
+<div class="btn">
+<span class="spinner"></span>
+compiling surprise...
+</div>
+
+</div>
+
+</div>
+
+<script>
+
+/* QR STYLE */
+
+const qr = new QRCodeStyling({
+
+width:220,
+height:220,
+
+data:"https://happybirthday.baso.id.vn/",
+
+type:"canvas",
+
+dotsOptions:{
+type:"rounded",
+
+gradient:{
+type:"linear",
+rotation:0,
+
+colorStops:[
+{offset:0,color:"#ff4fd8"},
+{offset:0.5,color:"#ff7b54"},
+{offset:1,color:"#ffd166"}
+]
+
+}
+
+},
+
+cornersSquareOptions:{
+type:"extra-rounded",
+color:"#ff7b54"
+},
+
+cornersDotOptions:{
+type:"dot",
+color:"#ffd166"
+},
+
+backgroundOptions:{
+color:"#ffffff"
+}
+
+})
+
+qr.append(document.getElementById("qr"))
+
+
+/* CONFETTI */
+
+for(let i=0;i<35;i++){
+
+let c=document.createElement("div")
+
+c.className="confetti"
+
+c.style.left=Math.random()*100+"vw"
+
+c.style.background=["#ff4fd8","#ff7b54","#ffd166","#ffffff"][Math.floor(Math.random()*4)]
+
+c.style.animationDuration=(5+Math.random()*6)+"s"
+
+document.body.appendChild(c)
+
+}
+
+</script>
+
+</body>
+</html>

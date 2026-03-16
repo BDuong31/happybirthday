@@ -27,7 +27,7 @@
 
 const CONFIG = {
   name: "Bảo Trâm",
-  photo: "./img/irene.jpg",
+  photo: "./img/tram.png",
   music: "./music/hbd.mpeg",
 
   colors: {
@@ -60,14 +60,14 @@ const CONFIG = {
 
     {
       type: "announcement",
-      text: "Bởi vì hôm nay là ngày rất đặc biệt — sinh nhật của bạn 🎉",
+      text: "Bởi vì hôm nay là ngày rất đặc biệt 🎉",
     },
 
     {
       type: "chatbox",
       message:
         "Chúc mừng sinh nhật Bảo Trâm. Mong rằng hôm nay sẽ là một ngày thật vui, thật nhiều tiếng cười và thật nhiều điều tốt đẹp đến với bạn.",
-      buttonText: "Gửi",
+      buttonText: "Gửi lời chúc",
     },
 
     {
@@ -77,7 +77,7 @@ const CONFIG = {
         "Một tin nhắn rất bình thường như bao người khác.",
         "Nhưng rồi mình nghĩ lại...",
         "Một người như bạn rất <strong>đặc biệt</strong>",
-        "thì nên nhận được một điều gì đó <strong>đặc biệt</strong>  hơn một chút.",
+        "thì nên nhận được một điều gì đó <strong>đặc biệt</strong> hơn một chút.",
         "Nên mình đã làm trang nhỏ này.",
         "Hy vọng khi bạn đọc đến đây...",
         "bạn sẽ mỉm cười một chút <span>:)</span>",
