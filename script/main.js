@@ -3,92 +3,92 @@
 * KHÔNG chỉnh sửa tệp này để tùy chỉnh. Chỉ chỉnh sửa config.js.
 */
 
-// const birthdayDate = new Date("2026-03-17 00:00:00").getTime();
+const birthdayDate = new Date("2026-03-17 00:00:00").getTime();
 
-// if (Date.now() < birthdayDate) {
+if (Date.now() < birthdayDate) {
 
-//   document.addEventListener("DOMContentLoaded", () => {
+  document.addEventListener("DOMContentLoaded", () => {
 
-//     document.body.innerHTML = `
-//       <div id="countdown-screen">
-//         <div class="countdown-box">
-//           <div id="countdown"></div>
-//         </div>
-//       </div>
-//     `;
+    document.body.innerHTML = `
+      <div id="countdown-screen">
+        <div class="countdown-box">
+          <div id="countdown"></div>
+        </div>
+      </div>
+    `;
 
-//     const style = document.createElement("style");
-//     style.innerHTML = `
-//       #countdown-screen{
-//         height:100vh;
-//         display:flex;
-//         justify-content:center;
-//         align-items:center;
-//         background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
-//         font-family:Poppins,sans-serif;
-//         color:white;
-//         text-align:center;
-//       }
+    const style = document.createElement("style");
+    style.innerHTML = `
+      #countdown-screen{
+        height:100vh;
+        display:flex;
+        justify-content:center;
+        align-items:center;
+        background:linear-gradient(135deg,#020617,#0f172a,#1e293b);
+        font-family:Poppins,sans-serif;
+        color:white;
+        text-align:center;
+      }
 
-//       .countdown-box{
-//         padding:40px 60px;
-//         border-radius:20px;
-//         background:rgba(255,255,255,0.05);
-//         backdrop-filter:blur(10px);
-//         box-shadow:0 0 40px rgba(236,72,153,0.3);
-//       }
+      .countdown-box{
+        padding:40px 60px;
+        border-radius:20px;
+        background:rgba(255,255,255,0.05);
+        backdrop-filter:blur(10px);
+        box-shadow:0 0 40px rgba(236,72,153,0.3);
+      }
 
-//       #countdown{
-//         font-size:40px;
-//         font-weight:700;
-//         margin-top:15px;
-//         color:#f472b6;
-//       }
-//     `;
-//     document.head.appendChild(style);
+      #countdown{
+        font-size:40px;
+        font-weight:700;
+        margin-top:15px;
+        color:#f472b6;
+      }
+    `;
+    document.head.appendChild(style);
 
-//     const countdownEl = document.getElementById("countdown");
+    const countdownEl = document.getElementById("countdown");
 
-//     function updateCountdown(){
+    function updateCountdown(){
 
-//       const now = new Date().getTime();
-//       const distance = birthdayDate - now;
+      const now = new Date().getTime();
+      const distance = birthdayDate - now;
 
-//       if(distance <= 0){
-//         location.reload();
-//         return;
-//       }
+      if(distance <= 0){
+        location.reload();
+        return;
+      }
 
-//       const days = Math.floor(distance/(1000*60*60*24));
-//       const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
-//       const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
-//       const seconds = Math.floor((distance%(1000*60))/1000);
+      const days = Math.floor(distance/(1000*60*60*24));
+      const hours = Math.floor((distance%(1000*60*60*24))/(1000*60*60));
+      const minutes = Math.floor((distance%(1000*60*60))/(1000*60));
+      const seconds = Math.floor((distance%(1000*60))/1000);
 
-//       let text="";
+      let text="";
 
-//       if(days>0){
-//         text=`${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`;
-//       }
-//       else if(hours>0){
-//         text=`${hours} giờ ${minutes} phút ${seconds} giây`;
-//       }
-//       else if(minutes>0){
-//         text=`${minutes} phút ${seconds} giây`;
-//       }
-//       else{
-//         text=`${seconds} giây`;
-//       }
+      if(days>0){
+        text=`${days} ngày ${hours} giờ ${minutes} phút ${seconds} giây`;
+      }
+      else if(hours>0){
+        text=`${hours} giờ ${minutes} phút ${seconds} giây`;
+      }
+      else if(minutes>0){
+        text=`${minutes} phút ${seconds} giây`;
+      }
+      else{
+        text=`${seconds} giây`;
+      }
 
-//       countdownEl.innerHTML=text;
-//     }
+      countdownEl.innerHTML=text;
+    }
 
-//     setInterval(updateCountdown,1000);
-//     updateCountdown();
+    setInterval(updateCountdown,1000);
+    updateCountdown();
 
-//   });
+  });
 
-//   throw new Error("Birthday page locked until the date.");
-// }
+  throw new Error("Birthday page locked until the date.");
+}
 
 // ── Chủ đề ────────────────────────────────────────────────────────
 let currentMode = (CONFIG.defaultMode || "dark");
